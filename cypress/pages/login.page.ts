@@ -5,10 +5,10 @@ export class LoginPage {
       { args: { username, password } },
       ({ username, password }) => {
         cy.get("#email").click();
-        cy.get("#email").type(username);
+        cy.get("#email").type(username, { log: false }); //to prevent revealing info in results
         cy.get("#pass").click();
-        cy.get("#pass").type(password);
-        cy.get("#btnLogin").click();
+        cy.get("#pass").type(password, { log: false }); //to prevent revealing info in results
+        cy.get("#login").click();
       }
     );
   }
@@ -19,10 +19,10 @@ export class LoginPage {
       { args: { username, password } },
       ({ username, password }) => {
         cy.get("#email").click();
-        cy.get("#email").type(username);
+        cy.get("#email").type(username, { log: false }); //to prevent revealing info in results
         cy.get("#pass").click();
-        cy.get("#pass").type(password);
-        cy.get("#btnLogin").click();
+        cy.get("#pass").type(password, { log: false }); //to prevent revealing info in results
+        cy.get("#login").click();
       }
     );
   }
